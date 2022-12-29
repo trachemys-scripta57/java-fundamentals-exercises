@@ -2,6 +2,8 @@ package com.bobocode.intro;
 
 import com.bobocode.util.ExerciseNotCompletedException;
 
+import java.util.Base64;
+
 /**
  * Welcome! This is an introduction exercise that will show you a simple example of Bobocode exercises.
  * <p>
@@ -16,6 +18,7 @@ import com.bobocode.util.ExerciseNotCompletedException;
  * @author Taras Boychuk
  */
 public class ExerciseIntroduction {
+//    static String em;
     /**
      * This method returns a very important message. If understood well, it can save you years of inefficient learning,
      * and unlock your potential!
@@ -24,7 +27,8 @@ public class ExerciseIntroduction {
      */
     public String getWelcomeMessage() {
         // todo: implement a method and return a message according to javadoc
-        throw new ExerciseNotCompletedException(); 
+//        throw new ExerciseNotCompletedException();
+        return "The key to efficient learning is practice!";
     }
 
     /**
@@ -40,6 +44,13 @@ public class ExerciseIntroduction {
      */
     public String encodeMessage(String message) {
         // todo: switch to branch "completed" in order to see how it should be implemented
-        throw new ExerciseNotCompletedException();
+//        throw new ExerciseNotCompletedException();
+        String em = Base64.getEncoder().encodeToString(getWelcomeMessage().getBytes());
+        return em;
+    }
+
+    public static void main(String[] args) {
+        ExerciseIntroduction ei = new ExerciseIntroduction();
+        System.out.println(ei.encodeMessage(ei.getWelcomeMessage()));
     }
 }

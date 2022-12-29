@@ -7,10 +7,10 @@ package com.bobocode.basics;
  * <p>
  * todo: refactor this class so it uses generic type "T" and run {@link com.bobocode.basics.BoxTest} to verify it
  */
-public class Box {
+public class Box<T> {
     private Object value;
 
-    public Box(Object value) {
+    public Box<T>(Object value) {
         this.value = value;
     }
 
